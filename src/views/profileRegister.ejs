@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="css/bootstrap.min.css"> 
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%=title%></title>
+</head>
+<body>
+  <style>
+    body {
+      background-image: url('https://i.pinimg.com/564x/fb/25/b7/fb25b7ae80038400593b7f9c7dbdf56d.jpg');
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: 100% 100%;
+    }
+    </style>
+    
+
+    <div class="container" style = "position:relative; top:80px">
+        <div calss="container" style = "padding-bottom: 30px;">
+            <h2>Register a new Profile</h2>
+        </div>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    
+            <div class="container-fluid">
+                <ul class="navbar-nav me-auto">
+                  <li class="nav-item">
+                    <%for(let i=0; i<nav.length; i++) {%>
+                      <li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="<%=nav[i].link%>"><%=nav[i].title%></a>
+                      </li>
+                      <%}%>
+                  </li>
+                  </li>
+              </div>
+            </div>
+          </nav>
+        </div>
+
+        <div class = "container" style = "position:relative; top:100px">
+          <div class="card border-dark mb-3" style="max-width: 100rem; max-height: 100;">
+            <div class="card-body">
+              <h4 class="card-title">Register</h4>
+
+              <% if (error) { %>
+                <div class="alert alert-dismissible alert-danger" style="max-width:470px">
+                  <p>Uh oh! There already exists a user with that name! <br> Please try again.<p>
+                </div>
+              <% } %>
+
+              <form action="/register" method="POST">
+                <div class="form-group" style="max-width:470px">
+                  <label for="usr" class="form-label mt-4">Username</label>
+                  <input type="text" class="form-control" name="usr" id="usr"  required>
+                </div>
+                <div class="form-group" style="max-width:470px">
+                  <label for="password" class="form-label mt-4">Password</label>
+                  <input type="password" class="form-control" name="password" id="password"  required>
+                </div>
+                <div class = "container" style="padding-top:20px; position:relative; right:12px">
+                  <button type="submit" class="btn btn-success">Register</button>
+                </div>
+              </form>
+
+              <div style="padding-top:40px">
+                <h6>Already have an account?<a href="/profileAccess"> Log In </a></h6>
+              </div>
+              
+              
+              
+            </div>
+          </div>
+        </div>
+</body>
+</html>

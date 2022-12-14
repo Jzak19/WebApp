@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="css/bootstrap.min.css"> 
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+  <style>
+    body {
+      background-image: url('https://i.pinimg.com/564x/fb/25/b7/fb25b7ae80038400593b7f9c7dbdf56d.jpg');
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: 100% 100%;
+    }
+    </style>
+    <div class="container" style = "position:relative; top:80px">
+        <div calss="container" style = "padding-bottom: 30px;">
+            <h2><%=title%></h2>
+        </div>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    
+            <div class="container-fluid">
+                <ul class="navbar-nav me-auto">
+
+                  
+
+                  <%for(let i=0; i<nav.length; i++) {%>
+                    <li>
+                        <li class="nav-item">
+                          <a class="nav-link" id="mainNav" href="<%=nav[i].link%>"><%=nav[i].title%></a>
+                    </li>
+                    <%}%>
+                    
+                  </li>
+                  </li>
+                
+              </div>
+            </div>
+          </nav>
+
+          <div class = "container" style = "position:relative; top:100px">
+            <div class="card border-dark mb-3" style="max-width: 100rem; max-height: 100;">
+              <div class="card-body">
+
+                
+
+                <h4 class="card-title"></h4>
+
+                <div style="padding-bottom: 100px">
+                  <h6>Thank you for taking the time to repport any issues you have found, please try to be as descriptive as possible in your report.</h6>
+                </div>
+
+
+                <form action="/submitBug" method="POST">
+                  <h6>Please describe the bug or issue here:</h6>
+                  <div class="form-floating mb-3" style="max-width: 500px; padding-top: 40px">
+                    <input type="text" class="form-control" name="bug" id="bug" placeholder="name" required>
+                  </div>
+
+                  <div style="padding-bottom: 20px; padding-top:20px">
+                    <button type="submit" class="btn btn-success" >Submit</button>
+                  </div>
+                </form>
+
+                <% if (report) { %>
+                  <div class="alert alert-dismissible alert-success" style="max-width:470px">
+                    <p>Success! Your report has been uploaded!<p>
+                  </div>
+                <% } %>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        
+    
+</body>
+</html>

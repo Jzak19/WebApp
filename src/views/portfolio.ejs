@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="css/bootstrap.min.css"> 
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%=title%></title>
+</head>
+<body>
+  <style>
+    body {
+      background-image: url('https://i.pinimg.com/564x/fb/25/b7/fb25b7ae80038400593b7f9c7dbdf56d.jpg');
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: 100% 100%;
+    }
+    </style>
+    <div class="container" style = "position:relative; top:80px">
+        <div calss="container" style = "padding-bottom: 30px;">
+            <h2>Portfolio</h2>
+        </div>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    
+            <div class="container-fluid">
+                <ul class="navbar-nav me-auto">
+                  <%for(let i=0; i<nav.length; i++) {%>
+                    <li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="<%=nav[i].link%>"><%=nav[i].title%></a>
+                    </li>
+                    <%}%>
+                  </li>
+                  </li>
+              </div>
+            </div>
+          </nav>
+        </div>
+    
+
+        <div class = "container" style = "position:relative; top:100px">
+          <div class="card border-dark mb-3" style="max-width: 100rem; max-height: 100;">
+
+            <style>p.wrapped {
+                
+              margin-right: 760px;
+
+              }
+            </style>
+            
+            <div class="card-body" style="padding-bottom:100px">
+              <h2 class="card-title" style="text-align:center">Our Work...</h2>
+            </div>
+            
+
+
+
+            <div class = "image" style="padding-top:20px;"><img src="\images\pen-holder.webp" style="width:300px; height:250px; float:left; padding-left: 10px;"></img>
+              <div style="position:relative; left:20px; margin-right:150px; padding-top:80px">
+              <h6 class="card-text">This project was outsourced to us by a client, who needed a pencil holder design. For an additional cost, we can take your design ideas and turn them into reality with the help of our brilliant engineering team. For this project, the inspiration and specification given to us by the client was from their love of the sea, as well as the simplicity of the Art Deco design movement, paired with the later progress to Streamlining.</h6>
+            </div>
+
+            </div>
+
+            <div class = "image" style="padding-top:60px;"><img src="\images\Jet-engine.jpg" style="width:300px; height:250px; float:right; padding-right: 10px;"></img>
+              <div style="position:relative; margin-right:349px; left:30px; padding-top:80px">
+              <h6 class="card-text">Here we were in contact with a client who shared his love of planes and engines with us. We decided to design a plane engine with multiple small parts to really show off the detail which goes into the construction of these machines, as well as the precision of our printers!</h6>
+            </div>
+
+            </div>
+
+            <div class = "image" style="padding-top:20px;"><img src="\images\3D-Printer-Projects-Musical-Instruments.jpg" style="width:300px; height:250px; float:left; padding-left: 10px;"></img>
+              <div style="position:relative; left:20px; margin-right:150px; padding-top:80px">
+              <h6 class="card-text">This project really shows off some of our less known printing machines, specifically, the ones which have a printing bed which moves much further than others, with the use of belts and gears. This allows us to break through limitations such as the size of the printing bed, and deliver larger printing projects to our clients.</h6>
+            </div>
+
+            </div>
+
+            <div class = "image" style="padding-top:60px;"><img src="\images\9415624d7181c305965b69ac518664d3.jpg" style="width:300px; height:250px; float:right; padding-right: 10px; padding-bottom: 10px;"></img>
+              <div style="position:relative; margin-right:349px; left:30px; padding-top:80px">
+              <h6 class="card-text">Desk toys are a big part of the 3D printing world. Many people percieve 3D printing as something which delivers highly static results. In reality, this is quite the opposite, as movable parts can easily be incorporated into most projects, resulting in endless new possibilities.</h6>
+            </div>
+
+            </div>
+            <div class="container" style="position:relative; float:left; padding-top:20px; padding-bottom: 10px;">
+              <button type="button" class="btn btn-primary"  onclick="redirect()">Report a bug</button>
+            </div>
+            <script>
+              function redirect() {
+                location.replace("http://localhost:3000/bugReports")
+              }
+            </script>
+
+          </div>
+        </div>  
+</body>
+</html>

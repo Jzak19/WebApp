@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+
+
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="css/bootstrap.min.css"> 
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="manifest" href="./manifest.webmanifest">
+    <title><%=title%></title>
+</head>
+<body>
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', function() {
+        navigator.serviceWorker.register('/sw.js').then(function(registration) {
+          // Registration was successful
+          console.log('ServiceWorker registration successful with scope: ', registration.scope);
+        }, function(err) {
+          // registration failed :(
+          console.log('ServiceWorker registration failed: ', err);
+        });
+      });
+    }
+  </script>
+
+  <style>
+    body {
+      background-image: url('https://i.pinimg.com/564x/fb/25/b7/fb25b7ae80038400593b7f9c7dbdf56d.jpg');
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: 100% 100%;
+    }
+    </style>
+    <div class="container" style = "position:relative; padding-top:40px">
+        <div calss="container" style = "padding-bottom: 30px;">
+            <h2>Home</h2>
+        </div>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    
+            <div class="container-fluid">
+                <ul class="navbar-nav me-auto">
+
+                  
+
+                  <%for(let i=0; i<nav.length; i++) {%>
+                    <li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="<%=nav[i].link%>"><%=nav[i].title%></a>
+                    </li>
+                    <%}%>
+                  </li>
+                  </li>
+              </div>
+            </nav>
+          </div>
+          
+        
+
+        <div class = "container" style = "position: relative; top:20px">
+          <div class="card border-dark mb-3" style="max-width: 100rem; max-height: 100;">
+
+            <style>p.wrapped {
+                
+              margin-right: 0px;
+
+              }
+            </style>
+            
+            <div class="card-body" style="padding-bottom:40px">
+              <h2 class="card-title" style="text-align:center">An introduction to 3D printing solutions for you...</h2>
+            </div>
+            
+            
+
+
+
+            <div style="padding-top:20px; padding-bottom:150">
+              <div style="position:relative; left:20px; margin-right:40px; padding-top:80px">
+              <h5 class="card-text" style="text-align:center">This portfolio aims to represent the amazing 3D printing work we do. In this landing page, you will have a brief overview of the machines we work with, the software we use, and a brief overview of some website actions! explore the website to find outmore about what we offer!</h5>
+            </div>
+
+            </div>
+          <style>
+            body {
+              min-height: 200vh;
+              display: -ms-grid;
+              display: grid;
+              place-items: center;
+            }
+            
+            .slider {
+              height: 500px;
+              margin: auto;
+              position: relative;
+              width: 90%;
+              display: -ms-grid;
+              display: grid;
+              place-items: center;
+              overflow: hidden;
+            }
+            
+            .slide-track {
+              display: -webkit-box;
+              display: -ms-flexbox;
+              display: flex;
+              width: calc(250px * 18);
+              -webkit-animation: scroll 90s linear infinite;
+              animation: scroll 90s linear infinite;
+            }
+            
+            @-webkit-keyframes scroll {
+              0% {
+                -webkit-transform: translateX(0);
+                transform: translateX(0);
+              }
+              100% {
+                -webkit-transform: translateX(calc(-250px * 9));
+                transform: translateX(calc(-250px * 9));
+              }
+            }
+            
+            @keyframes scroll {
+              0% {
+                -webkit-transform: translateX(0);
+                transform: translateX(0);
+              }
+              100% {
+                -webkit-transform: translateX(calc(-250px * 9));
+                transform: translateX(calc(-250px * 18));
+              }
+            }
+            
+            .slide {
+              height: 450px;
+              width: 850px;
+              display: -webkit-box;
+              display: -ms-flexbox;
+              display: flex;
+              -webkit-box-align: center;
+              -ms-flex-align: center;
+              align-items: center;
+              padding-left: 50px;
+              padding-right: 50px;
+              -webkit-perspective: 100px;
+              perspective: 50px;
+            }
+            
+            img {
+              width: 990%;
+              height: 990;
+              -webkit-transition: -webkit-transform 1%;
+              transition: -webkit-transform 1%;
+              transition: transform 1%;
+              transition: transform 1%, -webkit-transform 1%;
+            }
+            
+            img.hover {
+              -webkit-transform: translateX(20px);
+              transform: translateX(20px);
+              -webkit-transform: translateY(20px);
+              transform: translateY(20px);
+            }
+
+            .slider::before,
+            .slider::after {
+              background: linear-gradient(to right, rgb(40, 40, 40, 1) 0%,
+              rgba(27, 11, 151, 0) 100%);
+              content: '';
+              height: 100%;
+              position: absolute;
+              width: 15%;
+              z-index: 2;
+            }
+
+            .slider::before {
+              left: 0;
+              top: 0;
+            }
+
+            .slider::after {
+              right: 0;
+              top: 0;
+              transform: rotateZ(180deg);
+            }
+          </style>
+
+<div class="slider" style="padding-top: 100px; padding-bottom: 30px;">
+  <div class="slide-track">
+    <div class="slide">
+      <img src="/images/MP07825EU.w486h486.jpg"/>
+    </div>
+    <div class="slide">
+      <img src=" "/>
+    </div>
+    <div class="slide">
+      <img src="\images\61Jg1UeOkKL._SX522_.jpg" />
+    </div>
+    <div class="slide">
+      <img src=" "/>
+    </div>
+    <div class="slide">
+      <img src="\images\file-20210610-15-zbg4a1.avif" />
+    </div>
+    <div class="slide">
+      <img src=" "/>
+    </div>
+    <div class="slide">
+      <img src="\images\720X720-img-20201103-192004.jpg" />
+    </div>
+    <div class="slide">
+      <img src=" "/>
+    </div>
+    <div class="slide">
+      <img src="\images\Anycubic-Photon-Ultra-DLP-27344_2_800x.webp" />
+    </div>
+    <div class="slide">
+      <img src=" "/>
+    </div>
+    <div class="slide">
+      <img src="\images\ultimakers-version-of-cura-ultimakercom-191022.avif" />
+    </div>
+    <div class="slide">
+      <img src=" "/>
+    </div>
+    <div class="slide">
+      <img src="\images\485759b73d71d2d79b858981eeac4243.jpg" />
+    </div>
+    <div class="slide">
+      <img src=" "/>
+    </div>
+    <div class="slide">
+      <img src="\images\il_500x500.3548201600_bisl.webp" />
+    </div>
+    <div class="slide">
+      <img src=" "/>
+    </div>
+    <div class="slide">
+      <img src="\images\lamp_kap-1.png" />
+    </div>
+    <div class="slide">
+      <img src=" "/>
+    </div>
+
+
+
+    <div class="slide">
+      <img src="/images/MP07825EU.w486h486.jpg"/>
+    </div>
+    <div class="slide">
+      <img src=" "/>
+    </div>
+    <div class="slide">
+      <img src="\images\61Jg1UeOkKL._SX522_.jpg" />
+    </div>
+    <div class="slide">
+      <img src=" "/>
+    </div>
+    <div class="slide">
+      <img src="\images\file-20210610-15-zbg4a1.avif" />
+    </div>
+    <div class="slide">
+      <img src=" "/>
+    </div>
+    <div class="slide">
+      <img src="\images\720X720-img-20201103-192004.jpg" />
+    </div>
+    <div class="slide">
+      <img src=" "/>
+    </div>
+    <div class="slide">
+      <img src="\images\Anycubic-Photon-Ultra-DLP-27344_2_800x.webp" />
+    </div>
+    <div class="slide">
+      <img src=" "/>
+    </div>
+    <div class="slide">
+      <img src="\images\ultimakers-version-of-cura-ultimakercom-191022.avif" />
+    </div>
+    <div class="slide">
+      <img src=" "/>
+    </div>
+    <div class="slide">
+      <img src="\images\485759b73d71d2d79b858981eeac4243.jpg" />
+    </div>
+    <div class="slide">
+      <img src=" "/>
+    </div>
+    <div class="slide">
+      <img src="\images\il_500x500.3548201600_bisl.webp" />
+    </div>
+    <div class="slide">
+      <img src=" "/>
+    </div>
+    <div class="slide">
+      <img src="\images\lamp_kap-1.png" />
+    </div>
+    <div class="slide">
+      <img src=" "/>
+    </div>
+  </div>
+</div>
+
+              <div style="padding-top:300px; padding-bottom:150">
+                <div>
+                  <h3 class="card-text" style="text-align:center">A Brief History...</h3>
+                </div>
+              </div>
+
+            <div style="padding-top:40px; margin: auto; width:100%;">
+              <div style="position:relative; margin-left:100px; margin-right:100px; padding-top:60px">
+                <h6 class="card-text" style="text-align: center;">3D printing has evolved over the years. More and more affordable models have been created, and now almost anyone can start 3D printing! This comes with certain requirements, for example, knowing your way around multiple design and slicing softwares, understanding filaments differences, hardware preparation and maintanance, and many other unseen problems.</h6>
+                <img src="\images\UV3Dprinter.webp" style="padding-top:20px; width:400px; height:350px; display: block; margin-left:auto; margin-right: auto; "></img>
+              </div>
+            </div>
+
+            <div style="padding-top:300px; padding-bottom:150">
+              <div>
+                <h3 class="card-text" style="text-align:center">What We Offer...</h3>
+              </div>
+            </div>
+
+            <div style="padding-top:40px;">
+              <div style="position:relative; margin-left:100px; margin-right:100px; padding-top:60px">
+                <h6 class="card-text" style="text-align: center;">We specialise in both Fusion Deposition Modelling as well as Stereo Laser Sintering. These are the two main printing methods and they allow for different printing outputs. For more complicated pieces, we reccomend using SLS, and for simpler prints, FDM is cheaper and faster. We use SLicing software such as Cura, which allows us to apply requirements set out by customers, such as infill density and infill types, as well as the quality of the print itself.</h6>
+                <img src="\images\MIT-1-1280x720.jpg" style="padding-top:20px; width:400px; height:350px; padding-left: 10px; display: block; margin-left:auto; margin-right: auto; "></img>
+              </div>
+            </div>
+
+            <div style="padding-top:300px; padding-bottom:150">
+              <div>
+                <h3 class="card-text" style="text-align:center">Making Ideas, Into Reality...</h3>
+              </div>
+            </div>
+
+            <div style="padding-top:40px; padding-bottom: 40px;">
+              <div style="position:relative; margin-left:100px; margin-right:100px; padding-top:60px">
+                <h6 class="card-text" style="text-align: center;">If you wish to get in touch with us, whether it be an enquery about a service we offer, or a quote for a printing project you may have, we are happy to reach out to you and satisfy any of your 3D printing related needs. Just <a href="/profileRegister"> Register</a> a profile with us, and you will be able to upload files for us to examine, evaluate and price.</h6>
+                <img src="\images\960x0.jpg"  style="padding-top:20px; width:400px; height:350px;padding-left: 10px; display: block; margin-left:auto; margin-right: auto; "></img>
+              </div>
+              </div>
+
+              <div class="container" style="position:relative; float:left; padding-top:20px; padding-bottom: 10px;">
+                <button type="button" class="btn btn-primary"  onclick="redirect()">Report a bug</button>
+              </div>
+              <script>
+                function redirect() {
+                  location.replace("http://localhost:3000/bugReports")
+                }
+              </script>
+            </div>
+            
+
+            
+
+            </div>
+            
+
+            
+          </div>
+        </div> 
+
+              
+    
+</body>
+</html>
+

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="css/bootstrap.min.css"> 
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+  <style>
+    body {
+      background-image: url('https://i.pinimg.com/564x/fb/25/b7/fb25b7ae80038400593b7f9c7dbdf56d.jpg');
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: 100% 100%;
+    }
+    </style>
+    <div class="container" style = "position:relative; top:80px">
+        <div calss="container" style = "padding-bottom: 30px;">
+            <h2><%=title%></h2>
+        </div>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    
+            <div class="container-fluid">
+                <ul class="navbar-nav me-auto">
+
+                  
+
+                  <%for(let i=0; i<nav.length; i++) {%>
+                    <li>
+                        <li class="nav-item">
+                          <a class="nav-link" id="mainNav" href="<%=nav[i].link%>"><%=nav[i].title%></a>
+                    </li>
+                    <%}%>
+                    
+                  </li>
+                  </li>
+                
+              </div>
+            </div>
+          </nav>
+
+          <div class = "container" style = "position:relative; top:100px">
+            <div class="card border-dark mb-3" style="max-width: 100rem; max-height: 100;">
+              <div class="card-body">
+
+                
+
+                <h4 class="card-title"></h4>
+
+                <div style="padding-bottom: 100px">
+                  <h6>Welcome to your profile! Now that you have succesfully logged in, you wont need to repeat that action until you log out. <br> this page you can submit files for us to check and get back to you with a printing quote.</h6>
+                </div>
+
+
+                <form action="/submit" method="POST">
+                  <h6>Please input your email and file here:</h6>
+                  <div class="form-floating mb-3" style="max-width: 500px; padding-top: 40px">
+                    <input type="email" class="form-control" name="name" id="name" placeholder="name" required>
+                  </div>
+
+                  <div class="form-group" style="max-width: 500px; ">
+                    <label for="formFile" class="form-label mt-4"></label>
+                    <input class="form-control" type="file" name="file" id="file" required>
+                  </div>
+
+                  <div style="padding-bottom: 20px; padding-top:20px">
+                    <button type="submit" class="btn btn-success" >Submit</button>
+                  </div>
+                </form>
+
+                <% if (success) { %>
+                  <div class="alert alert-dismissible alert-success" style="max-width:470px">
+                    <p>Success! Your files have been uploaded, we will contact you soon with a quote!<p>
+                  </div>
+                <% } %>
+
+                <form action="/logout" method="POST">
+
+                  <button class="btn btn-danger"  style="float:right" type="submit">LogOut</button>
+                  
+                </form>
+
+                
+                    
+                
+              </div>
+            </div>
+          </div>
+        </div>
+
+        
+    
+</body>
+</html>
